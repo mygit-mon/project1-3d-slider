@@ -184,20 +184,20 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 567px) and (max-width: 767px) {
   /* Styles for larger mobile devices */
   .container .pokemon-card-slider {
-    width: 80px;
-    height: 110px;
+    width: 90px;
+    height: 120px;
     left: calc(50% - 40px);
-    top: 22%;
+    top: 10%;
   }
 
   .container .pokemon-card-slider .pokemon-card-item {
     transform: rotateY(
         calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
       )
-      translateZ(210px);
+      translateZ(290px);
   }
 
   .container .content .pokemon-logo img {
@@ -218,13 +218,14 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 565px) {
   /* Styles for small mobile devices */
 
   .container .pokemon-card-slider {
     width: 80px;
     height: 110px;
     left: calc(50% - 40px);
+    top: 30%;
   }
 
   .container .pokemon-card-slider .pokemon-card-item {
