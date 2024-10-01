@@ -172,6 +172,7 @@ body {
   right: 10px;
   top: -8px;
   font-size: 50px;
+  z-index: 10;
 }
 
 .container .banner .banner-content p {
