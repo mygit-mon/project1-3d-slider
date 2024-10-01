@@ -3,6 +3,7 @@
 @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -242,7 +243,7 @@ body {
   }
 
   .container .model {
-    background-size: 90% 70%;
+    background-size: auto 70%;
     bottom: -170px;
     left: 0;
   }
