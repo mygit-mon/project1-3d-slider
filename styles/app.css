@@ -1,6 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+* {
+  margin: 0;
+}
 
 body {
   width: 100vw;
@@ -101,7 +104,7 @@ body {
   margin: 0;
 }
 
-.container .content .model {
+.container .model {
   background-image: url(../assets/ash.png);
   width: 100%;
   height: 75vh;
@@ -237,9 +240,9 @@ body {
     width: 250px;
   }
 
-  .container .content .model {
+  .container .model {
     background-size: auto 90%;
-    bottom: -40px;
+    bottom: -90px;
   }
 
   .container .logo-container {
