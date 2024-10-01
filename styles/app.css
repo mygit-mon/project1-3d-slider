@@ -189,6 +189,7 @@ body {
     width: 80px;
     height: 110px;
     left: calc(50% - 40px);
+    top: 22%;
   }
 
   .container .pokemon-card-slider .pokemon-card-item {
@@ -241,8 +242,9 @@ body {
   }
 
   .container .model {
-    background-size: auto 90%;
-    bottom: -90px;
+    background-size: 90% 70%;
+    bottom: -170px;
+    left: 0;
   }
 
   .container .logo-container {
