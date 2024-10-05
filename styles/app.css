@@ -9,7 +9,6 @@
 body {
   width: 100vw;
   min-height: 100vh;
-  background-color: red;
   background-image: url(../assets/pokemon-background.jpg);
   background-position: center;
   background-repeat: no-repeat;
