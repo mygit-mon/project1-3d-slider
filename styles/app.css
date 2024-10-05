@@ -616,7 +616,7 @@ body {
   }
 
   .pop-view-card .view-card-img {
-    width: 700px;
+    width: 600px;
   }
 
   .pop-view-card .view-img img {
@@ -625,7 +625,7 @@ body {
 
   @keyframes appearPokemon {
     0% {
-      top: 700px;
+      top: 600px;
       opacity: 0;
     }
 
@@ -642,7 +642,7 @@ body {
     }
 
     100% {
-      top: 400px;
+      top: 350px;
       opacity: 1;
     }
   }
