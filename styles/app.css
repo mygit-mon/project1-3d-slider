@@ -599,7 +599,12 @@ body {
 /* Landscape */
 @media only screen and (orientation: landscape) {
   .container .content .pokemon-logo img {
-    width: 24+0px;
+    width: 240px;
+  }
+
+  .pop-view-card {
+    width: 100%;
+    height: 100%;
   }
 
   .pop-view-card .view-card-img {
