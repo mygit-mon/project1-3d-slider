@@ -8,15 +8,17 @@
 
 body {
   width: 100vw;
-  min-height: 100vh;
+  height: 100%;
   background-image: url(../assets/pokemon-background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
@@ -594,7 +596,46 @@ body {
   }
 }
 
-/* Landscape Media  */
+/* Landscape */
+@media only screen and (orientation: landscape) {
+  .container .content .pokemon-logo img {
+    width: 24+0px;
+  }
+
+  .pop-view-card .view-card-img {
+    width: 180px;
+  }
+
+  .pop-view-card .view-img img {
+    width: 180px;
+  }
+
+  @keyframes appearPokemon {
+    0% {
+      top: 15%;
+      opacity: 0;
+    }
+
+    25% {
+      opacity: 0.4;
+    }
+
+    50% {
+      opacity: 0.6;
+    }
+
+    75% {
+      opacity: 0.8;
+    }
+
+    100% {
+      top: 0%;
+      opacity: 1;
+    }
+  }
+}
+
+/* Desktop Mode */
 @media only screen and (max-width: 1200px) and (min-height: 1200px) {
   .container .pokemon-card-slider {
     top: 20%;
