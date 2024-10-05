@@ -595,7 +595,7 @@ body {
 }
 
 /* Landscape Media  */
-@media only screen and (max-width: 875px) and (min-height: 1200px) {
+@media only screen and (max-width: 1200px) and (min-height: 1200px) {
   .container .pokemon-card-slider {
     top: 20%;
     height: 250px;
