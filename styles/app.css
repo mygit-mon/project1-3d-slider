@@ -571,7 +571,7 @@ body {
 
   @keyframes appearPokemon {
     0% {
-      top: 150px;
+      top: 25%;
       opacity: 0;
     }
 
@@ -588,7 +588,7 @@ body {
     }
 
     100% {
-      top: 50px;
+      top: 15%;
       opacity: 1;
     }
   }
