@@ -35,3 +35,55 @@ document.querySelector('.close-banner').addEventListener('click', () => {
 });
 
 window.onload = checkDisplayedBanner();
+
+// function view the card
+function viewCard(cardName, cardImage, pokemonImg) {
+  console.log(cardName, cardImage, pokemonImg);
+  const popViewCard = document.querySelector('.pop-view-card');
+  const cardSlider = document.querySelector('.pokemon-card-slider');
+  const cardItems = document.querySelectorAll('.pokemon-card-item');
+
+  cardItems.forEach((cardItem) => {
+    if (cardItem.classList.contains(cardName)) {
+      cardItem.classList.add('none');
+    }
+  });
+
+  cardSlider.style.animationPlayState = 'paused';
+
+  popViewCard.classList.add('active');
+
+  popViewCard.innerHTML = `
+  <div class="view-card-img">
+    <img src='./assets/pokemon-card/${cardImage}' />
+  </div>
+  <div class="view-img">
+    <img src='./assets/pokemon-image/${pokemonImg}'/>
+  </div>
+  `;
+
+  const viewCardImage = document.querySelector('.view-card-img');
+
+  const viewImage = document.querySelector('.view-img img');
+
+  // Prevent clicks on the content from closing the pop-up
+  viewCardImage.addEventListener('click', function (event) {
+    event.stopPropagation();
+
+    viewCardImage.classList.toggle('active');
+    viewImage.classList.toggle('active');
+  });
+}
+
+function closeViewCard() {
+  const popViewCard = document.querySelector('.pop-view-card');
+  const cardSlider = document.querySelector('.pokemon-card-slider');
+  const cardItems = document.querySelectorAll('.pokemon-card-item');
+
+  cardItems.forEach((cardItem) => {
+    cardItem.classList.remove('none');
+  });
+
+  cardSlider.style.animationPlayState = 'running';
+  popViewCard.classList.remove('active');
+}

@@ -6,7 +6,7 @@
     <title>PokeMON</title>
 
     <!-- Logo -->
-    <link rel="icon" href="./assets/logo.png" type="image" />
+    <link rel="icon" href="./assets/logo/logo.png" type="image" />
 
     <!-- CSS Extensions -->
     <link rel="stylesheet" href="./styles/app.css" />
@@ -20,50 +20,100 @@
   <body>
     <div class="container">
       <div class="pokemon-card-slider" style="--quantity: 10">
-        <div class="pokemon-card-item" style="--position: 1">
-          <img src="./assets/charizard-card.jpg" alt="" />
+        <!-- Charizard Slider Item-->
+        <div class="pokemon-card-item charizard" style="--position: 1">
+          <img
+            src="./assets/pokemon-card/charizard-card.jpg"
+            alt=""
+            onclick="viewCard('charizard', 'charizard-card.jpg', 'charizard-image.webp')"
+          />
         </div>
 
-        <div class="pokemon-card-item" style="--position: 2">
-          <img src="./assets/talonflame-card.jpg" alt="" />
+        <!-- Talonflame Slider Item-->
+        <div class="pokemon-card-item talonflame" style="--position: 2">
+          <img
+            src="./assets/pokemon-card/talonflame-card.jpg"
+            alt=""
+            onclick="viewCard('talonflame', 'talonflame-card.jpg', 'talonflame-image.webp')"
+          />
         </div>
 
-        <div class="pokemon-card-item" style="--position: 3">
-          <img src="./assets/dragonite-card.png" alt="" />
+        <!-- Dragonit Slider Item -->
+        <div class="pokemon-card-item dragonite" style="--position: 3">
+          <img
+            src="./assets/pokemon-card/dragonite-card.png"
+            alt=""
+            onclick="viewCard('dragonite', 'dragonite-card.png', 'dragonite-img.webp')"
+          />
         </div>
 
-        <div class="pokemon-card-item" style="--position: 4">
-          <img src="./assets/gengar-card.jpg" alt="" />
+        <!-- Gengar Slider Item -->
+        <div class="pokemon-card-item gengar" style="--position: 4">
+          <img
+            src="./assets/pokemon-card/gengar-card.jpg"
+            alt=""
+            onclick="viewCard('gengar', 'gengar-card.jpg', 'gengar-image.webp')"
+          />
         </div>
 
-        <div class="pokemon-card-item" style="--position: 5">
-          <img src="./assets/greninja-card.jpg" alt="" />
+        <!-- Greninja SLider Item -->
+        <div class="pokemon-card-item greninja" style="--position: 5">
+          <img
+            src="./assets/pokemon-card/greninja-card.jpg"
+            alt=""
+            onclick="viewCard('greninja', 'greninja-card.jpg', 'greninja-image.webp')"
+          />
         </div>
 
-        <div class="pokemon-card-item" style="--position: 6">
-          <img src="./assets/infernape-card.jpg" alt="" />
+        <!-- Infernape Slider Item -->
+        <div class="pokemon-card-item infernape" style="--position: 6">
+          <img
+            src="./assets/pokemon-card/infernape-card.jpg"
+            alt=""
+            onclick="viewCard('infernape', 'infernape-card.jpg', 'infernape-image.png')"
+          />
         </div>
 
-        <div class="pokemon-card-item" style="--position: 7">
-          <img src="./assets/lucario-card.jpg" alt="" />
+        <!-- Lucario Slider Item -->
+        <div class="pokemon-card-item lucario" style="--position: 7">
+          <img
+            src="./assets/pokemon-card/lucario-card.jpg"
+            alt=""
+            onclick="viewCard('lucario', 'lucario-card.jpg', 'lucario-image.webp')"
+          />
         </div>
 
-        <div class="pokemon-card-item" style="--position: 8">
-          <img src="./assets/lycanroc-card.jpg" alt="" />
+        <!-- Lycanroc Slider Item -->
+        <div class="pokemon-card-item lycanrock" style="--position: 8">
+          <img
+            src="./assets/pokemon-card/lycanroc-card.jpg"
+            alt=""
+            onclick="viewCard('lycanrock', 'lycanroc-card.jpg', 'lycanrock-image.png')"
+          />
         </div>
 
-        <div class="pokemon-card-item" style="--position: 9">
-          <img src="./assets/pikachu-card.jpg" alt="" />
+        <!-- Pikachu Slider Item -->
+        <div class="pokemon-card-item pikachu" style="--position: 9">
+          <img
+            src="./assets/pokemon-card/pikachu-card.jpg"
+            alt=""
+            onclick="viewCard('pikachu', 'pikachu-card.jpg', 'pikachu-image.webp')"
+          />
         </div>
 
-        <div class="pokemon-card-item" style="--position: 10">
-          <img src="./assets/snorlax-card.jpg" alt="" />
+        <!-- Snorlax Slider Item -->
+        <div
+          class="pokemon-card-item snorlax-card"
+          style="--position: 10"
+          onclick="viewCard('snorlax-card','snorlax-card.jpg', 'snorlax-image.webp')"
+        >
+          <img src="./assets/pokemon-card/snorlax-card.jpg" alt="" />
         </div>
       </div>
 
       <div class="content">
         <div class="pokemon-logo">
-          <img src="./assets/pokemon-logo.png" alt="" />
+          <img src="./assets/logo/pokemon-logo.png" alt="" />
         </div>
 
         <div class="author">
@@ -77,7 +127,7 @@
 
       <!-- My Personal Logo -->
       <div class="logo-container">
-        <img src="./assets/my-logo-1.png" alt="" />
+        <img src="./assets/logo/my-logo-1.png" alt="" />
       </div>
 
       <!-- Pop up Banner -->
@@ -99,22 +149,25 @@
         </div>
 
         <div class="top-left">
-          <img src="./assets/banner-legendary2.png" alt="" />
+          <img src="./assets/banner/banner-legendary2.png" alt="" />
         </div>
 
         <div class="bottom-right">
-          <img src="./assets/banner-legendary1.png" alt="" />
+          <img src="./assets/banner/banner-legendary1.png" alt="" />
         </div>
 
         <div class="bottom-left">
-          <img src="./assets/banner-2.png" alt="" />
+          <img src="./assets/banner/banner-2.png" alt="" />
         </div>
 
         <div class="top-right">
-          <img src="./assets/banner-1.png" alt="" />
+          <img src="./assets/banner/banner-1.png" alt="" />
         </div>
       </div>
     </div>
+
+    <!-- Popup Card -->
+    <div class="pop-view-card" onclick="closeViewCard()"></div>
 
     <script src="./scripts/app.js"></script>
   </body>

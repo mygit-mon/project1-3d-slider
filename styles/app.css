@@ -33,6 +33,7 @@ body {
   transform: perspective(1000px);
   transition: all 0.3s ease;
   animation: autoRun 20s linear infinite;
+
   z-index: 3;
 }
 
@@ -49,12 +50,19 @@ body {
 .container .pokemon-card-slider .pokemon-card-item {
   position: absolute;
   overflow: hidden;
+  cursor: pointer;
   border-radius: 10px;
   inset: 0 0 0 0;
   transform: rotateY(
       calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
     )
     translateZ(500px);
+
+  transition: 0.3s;
+}
+
+.container .pokemon-card-slider .pokemon-card-item.none {
+  display: none;
 }
 
 .container .pokemon-card-slider .pokemon-card-item img {
@@ -90,7 +98,7 @@ body {
 .container .content .author {
   position: absolute;
   bottom: 70px;
-  right: -150px;
+  right: 0px;
   font-family: Poppins;
   text-align: right;
   max-width: 200px;
@@ -185,10 +193,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 
 .container .banner .top-left img {
-  width: 600px;
+  width: 500px;
   opacity: 0.5;
 }
 
@@ -196,10 +205,11 @@ body {
   position: absolute;
   bottom: -30px;
   right: 0;
+  z-index: 2;
 }
 
 .container .banner .bottom-right img {
-  width: 600px;
+  width: 500px;
   z-index: 2;
   opacity: 0.5;
 }
@@ -211,7 +221,7 @@ body {
 }
 
 .container .banner .bottom-left img {
-  width: 600px;
+  width: 500px;
   opacity: 0.5;
 }
 
@@ -222,12 +232,92 @@ body {
 }
 
 .container .banner .top-right img {
+  width: 450px;
   z-index: -1;
   opacity: 0.5;
 }
 
-@media (min-width: 1280px) and (max-width: 1440px) {
-  /* Styles for small laptops */
+.pop-view-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.pop-view-card.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.pop-view-card .view-card-img {
+  width: 350px;
+  overflow: hidden;
+  border-radius: 20px;
+  z-index: 300;
+  transition: 0.3s;
+  cursor: pointer !important;
+}
+
+.pop-view-card .view-card-img.active {
+  transform: rotate(-90deg) rotateY(70deg);
+}
+
+.pop-view-card .view-card-img img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.pop-view-card .view-img img {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  z-index: 300;
+  transform: translateX(-50%);
+  width: 320px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.pop-view-card .view-img img.active {
+  visibility: visible;
+  opacity: 0;
+
+  animation: appearPokemon 0.7s ease-out forwards;
+}
+
+@keyframes appearPokemon {
+  0% {
+    top: 120px;
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+
+  100% {
+    top: 50px;
+    opacity: 1;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
@@ -248,6 +338,14 @@ body {
     right: 50px;
     bottom: 50px;
   }
+
+  .pop-view-card .view-card-img {
+    width: 300px;
+  }
+
+  .pop-view-card .view-img img {
+    width: 280px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -265,8 +363,8 @@ body {
       translateZ(300px);
   }
 
-  .container .content .pokemon-logo img {
-    width: 280px;
+  .container .content .author {
+    opacity: 0;
   }
 
   .container .content .model {
@@ -276,6 +374,7 @@ body {
 
   .container .logo-container {
     display: block;
+    left: 30px;
   }
 
   .container .logo-container img {
@@ -306,6 +405,14 @@ body {
     width: 1200px;
     opacity: 0.5;
   }
+
+  .pop-view-card .view-card-img {
+    width: 280px;
+  }
+
+  .pop-view-card .view-img img {
+    width: 260px;
+  }
 }
 
 @media (min-width: 567px) and (max-width: 767px) {
@@ -324,8 +431,8 @@ body {
       translateZ(290px);
   }
 
-  .container .content .pokemon-logo img {
-    width: 280px;
+  .container .content .author {
+    display: none;
   }
 
   .container .content .model {
@@ -335,6 +442,7 @@ body {
 
   .container .logo-container {
     display: block;
+    left: 30px;
   }
 
   .container .banner .banner-content {
@@ -368,6 +476,14 @@ body {
 
   .container .banner .bottom-right {
     display: none;
+  }
+
+  .pop-view-card .view-card-img {
+    width: 260px;
+  }
+
+  .pop-view-card .view-img img {
+    width: 240px;
   }
 }
 
@@ -446,5 +562,13 @@ body {
 
   .container .banner .bottom-right {
     display: none;
+  }
+
+  .pop-view-card .view-card-img {
+    width: 240px;
+  }
+
+  .pop-view-card .view-img img {
+    width: 230px;
   }
 }
