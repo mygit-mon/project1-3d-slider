@@ -319,7 +319,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+@media (min-device-width: 1024px) and (max-device-width: 1280px) {
   /* Styles for tablets (landscape) */
   .container .pokemon-card-slider {
     width: 90px;
