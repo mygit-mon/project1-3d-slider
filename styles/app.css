@@ -571,4 +571,28 @@ body {
   .pop-view-card .view-img img {
     width: 230px;
   }
+
+  @keyframes appearPokemon {
+    0% {
+      top: 150px;
+      opacity: 0;
+    }
+
+    25% {
+      opacity: 0.4;
+    }
+
+    50% {
+      opacity: 0.6;
+    }
+
+    75% {
+      opacity: 0.8;
+    }
+
+    100% {
+      top: 50px;
+      opacity: 1;
+    }
+  }
 }
